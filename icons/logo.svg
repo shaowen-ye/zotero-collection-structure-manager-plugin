@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <title>Collection Structure Manager</title>
+  <rect x="10" y="12" width="108" height="104" rx="24" fill="#f8fafc"/>
+  <path d="M22 39c0-7 5-12 12-12h20c5 0 9 2 12 7l5 7h25c7 0 12 5 12 12v42c0 7-5 12-12 12H34c-7 0-12-5-12-12V39z" fill="#ffffff" stroke="#3f4b5b" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M47 59v32M47 75h23M47 91h23" fill="none" stroke="#1a73e8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="47" cy="59" r="8" fill="#1a73e8"/>
+  <circle cx="75" cy="75" r="8" fill="#188038"/>
+  <circle cx="75" cy="91" r="8" fill="#f9ab00"/>
+  <path d="M89 58l8 8 14-18" fill="none" stroke="#d93025" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
