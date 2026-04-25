@@ -235,10 +235,8 @@ CollectionStructureManagerPlugin = {
   isOpenShortcutEvent(event) {
     const key = String(event.key || "").toLowerCase();
     const isM = key === "m" || event.code === "KeyM";
-    const isJ = key === "j" || event.code === "KeyJ";
     const structureShortcut = isM && event.shiftKey && event.metaKey && !event.ctrlKey && !event.altKey;
-    const quickJumperShortcut = isJ && event.shiftKey && (event.metaKey || event.ctrlKey) && !event.altKey;
-    return Boolean(structureShortcut || quickJumperShortcut);
+    return Boolean(structureShortcut);
   },
 
   async openManager(window) {

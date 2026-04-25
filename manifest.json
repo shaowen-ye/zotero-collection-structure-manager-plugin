@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Collection Structure Manager",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Safely inspect and manage Zotero collection structure.",
   "icons": {
     "48": "icons/icon-48.png",
