@@ -10,7 +10,7 @@ CollectionStructureManagerPlugin = {
     styleID: "collection-structure-manager-style",
     overlayID: "collection-structure-manager-overlay",
     menuLabel: "文件夹结构管理器...",
-    shortcutLabel: "Shift+Cmd+M",
+    shortcutLabel: "Shift+Cmd/Ctrl+M",
     dialogTitle: "文件夹结构管理器",
     searchPlaceholder: "搜索文件夹名称或路径",
     emptyLabel: "没有匹配的文件夹",
@@ -235,8 +235,23 @@ CollectionStructureManagerPlugin = {
   isOpenShortcutEvent(event) {
     const key = String(event.key || "").toLowerCase();
     const isM = key === "m" || event.code === "KeyM";
-    const structureShortcut = isM && event.shiftKey && event.metaKey && !event.ctrlKey && !event.altKey;
-    return Boolean(structureShortcut);
+    if (!isM || !event.shiftKey || event.altKey) {
+      return false;
+    }
+
+    if (this.isMacPlatform(event)) {
+      return Boolean(event.metaKey && !event.ctrlKey);
+    }
+    return Boolean(event.ctrlKey && !event.metaKey);
+  },
+
+  isMacPlatform(event) {
+    if (typeof Zotero !== "undefined" && typeof Zotero.isMac === "boolean") {
+      return Zotero.isMac;
+    }
+    const navigator = event && event.view && event.view.navigator;
+    const platform = String((navigator && (navigator.platform || navigator.userAgent)) || "");
+    return /Mac|iPhone|iPad|iPod/.test(platform);
   },
 
   async openManager(window) {
