@@ -1,4 +1,4 @@
-# Zotero Collection Structure Manager Plugin
+# Zotero Collection Structure Manager Plugin / Zotero 文件夹结构管理器插件
 
 ![Collection Structure Manager logo](icons/icon-128.png)
 
