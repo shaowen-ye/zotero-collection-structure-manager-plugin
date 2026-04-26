@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Collection Structure Manager",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Safely inspect and manage Zotero collection structure.",
   "icons": {
     "48": "icons/icon-48.png",
@@ -13,7 +13,7 @@
       "id": "collection-structure-manager@plugin.local",
       "update_url": "https://example.com/zotero-collection-structure-manager-plugin/updates.json",
       "strict_min_version": "7.0",
-      "strict_max_version": "7.0.*"
+      "strict_max_version": "9.*"
     }
   }
 }
